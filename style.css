@@ -1,0 +1,53 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.eye-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.eye {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin: 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pupil {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-in;
+}
+
+.eyelid-top {
+  width: 100%;
+  height: 25%;
+  background-color: black;
+  z-index: 1;
+}
+
+.eye:hover .eyelid-top {
+  height: 100%;
+  transition: height 0.1s ease-out;
+}
